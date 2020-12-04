@@ -1,40 +1,25 @@
-// class list{
-//   constructor(){
-//     this.data = [];
-//   }
+const arr = [1,2,3,4,5,6];
 
-//   add(data){
-//     this.data.push(data);
-//     console.log(this.data);
-//   }
-// }
+const newArr =  arr.map(function(item,index){
+  return item + index;
+})
 
-// class todoList extends list{
-//   constructor(){
-//     super();
+console.log(newArr)
 
-//     this.usuario = "Emanuel"
-//   }
+const soma = arr.reduce(function( total,next){
+  return total + next;
+})
 
-//   mostraUsuario(){
-//     console.log(this.usuario)
-//   }
-// }
+console.log(soma)
 
-// const MinhaLista = new todoList();
+const filter = arr.filter(function(item){
+  return item % 2 ===0;
+})
 
-// const button = document.getElementById("novotodos")
+console.log(filter)
 
-// button.onclick = ()=> {
-//   MinhaLista.add();
-// }
+const find = arr.find(function(item){
+  return item ===7;
+})
 
-// MinhaLista.mostraUsuario()
-
-class matematica{
-  static soma(a,b){
-    return a + b;
-  }
-}
-
-console.log(matematica.soma(5,2))
+console.log(find)
